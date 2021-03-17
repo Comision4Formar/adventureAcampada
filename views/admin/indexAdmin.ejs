@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+<link rel="stylesheet" href="../stylesheets/admin.css">
+<!-- /CSS -->
+<body>
+<!-- HEADER -->
+<%- include('./partials/header')  %> 
+<!-- /HEADER -->
+<!--Inicio Home-->
+<main class="productos" style="margin-top: 140px;">
+  <h1>Panel de Administracion</h1>
+  <h2>Welcome <%= user.firstName %> </h2>
+</main>  
+<!--Fin Home-->
+ <!-- SCRIPTS -->
+ <%- include('./partials/scripts')  %> 
+ <!-- /SCRIPTS -->
+</body>
+  <!--FOOTER-->
+  <%-include('./partials/footer') %>  
+  <!--/FOOTER-->
+</html>

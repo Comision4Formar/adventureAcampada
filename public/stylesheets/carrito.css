@@ -1,0 +1,96 @@
+
+/* CUERPO */
+  body{
+    background-image: url('../img/backgroundfinal.jpg');
+    background-size: cover;
+    background-position-y: 100%;
+}
+main section.row{
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+    padding:5px;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+}/*se agrega main antes de la clase row se modifica CSS y no ejs*/
+p.price{
+   padding-top: 5%;
+   justify-content: center;
+   text-align: center;
+}
+
+.precio{
+    align-content: center;
+}
+.btn{
+    background-color:var(--colorNaranja); 
+}
+button.btn{
+   margin-top:5px; 
+   margin-bottom:5px;
+}
+button.cantidad{
+    margin-top:5%; 
+    margin-bottom:5px;
+    align-content: center;
+    width: 100%;
+ }
+ div.btn-group{
+    align-content: center;
+ }
+
+ /* Configuracion de los botones */
+.btn-success{
+    width: 100%;
+    margin: 15px 0 15px 0;
+    background-color: var(--colorNaranja); 
+    border-color: var(--colorNaranja); 
+}
+.btn-success:hover{
+    background-color: var(--colorAzul);
+    border-color: var(--colorAzul);
+    box-shadow: 0 0 0 0.25rem var(--colorAzul);
+}
+
+.btn-check:focus+.btn-success, .btn-success:focus {
+    color: #fff;
+    background-color: var(--colorAzul);
+    border-color: var(--colorAzul);
+    box-shadow: 0 0 0 0.25rem var(--colorAzul);
+}
+/* boton con opciones desplegables */
+ul.dropdown-menu.show{
+    background-color: #f9efda;
+    border-radius: 5px;
+}
+ul.dropdown-menu.show:active{
+    border-color: var(--colorNaranja); 
+}
+
+/* seccion de precios */
+.total-price-number, .total-price-title{
+    text-align: center;
+}
+/* Targeta de producto */
+.card{
+    border: none;
+}
+.card-body{
+    text-align: center;
+}
+/* Configuraciones qery */
+@media(min-width:1024px){
+    p.price{
+        margin-top:40%;
+    }
+    button.cantidad{
+        margin-top: 40%;
+    }
+}
+/* Elimino baner */
+.headerFondo{
+  display: none;
+}
+
+h1{
+  margin-top: 150px;
+}

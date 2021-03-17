@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<%- include('partials/head') %> 
+<!-- /HEAD -->
+
+<!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/formProducto.css">
+<!-- /CSS -->
+<body>
+
+    <!-- HEADER -->
+    <%- include('partials/header')  %> 
+    <!-- /HEADER -->
+
+    <main class="container" style="margin-top: 150px;">
+        <h1 class="text-center my-5">registro de producto</h1>
+        <form action="/admin/products/store" method="POST" enctype="multipart/form-data">
+            <section class="datos row">
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Titulo del Anuncio" name="name">
+                        <label for="floatingInput">Titulo del Anuncio *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="id" name="id">
+                        <label for="floatingInput">Codigo de Producto (id) *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="Precio" name="price">
+                        <label for="floatingInput">Precio *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="Descuento" name="discount">
+                        <label for="floatingInput">Descuento %</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Marca" name="mark">
+                        <label for="floatingInput">Marca *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Origen" name="origin">
+                        <label for="floatingInput">Origen *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="colors">
+                        <label for="floatingInput">Color *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Talle" name="size">
+                        <label for="floatingInput">Talle</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Material" name="material">
+                        <label for="floatingInput">Material</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select" aria-label="Default select example" name="category">
+                            <option selected disabled>Categoria</option>
+                            <option name="category" value="mochilas">Mochilas</option>
+                            <option name="category" value="bolsas de dormir">Bolsas de Dormir</option>
+                            <option name="category" value="herramientas">Herramientas</option>
+                            <option name="category" value="recomendados">Recomendados</option>
+                            <option name="category" value="mas vendidos">Mas Vendidos</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select" name="stock" aria-label="Default select example" id="stock">
+                            <option selected disabled>Stock</option>
+                            <option name="stock" value="1">1</option>
+                            <option name="stock" value="2">2</option>
+                            <option name="stock" value="3">3</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select delivery" name="delivery" aria-label="Default select example" id="delivery">
+                            <option selected disabled>Envio</option>
+                            <option name="delivery" value="1">Si</option>
+                            <option name="delivery" value="2">No</option>
+                            <option name="delivery" value="3">Consultar al vendedor</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <textarea class="form-control description" placeholder="Leave a comment here" id="floatingTextarea2 description"
+                            style="height: 100px" name="description"></textarea>
+                        <label for="floatingTextarea2">Descripciòn</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-12 col-lg-12">
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02" name="image-product">
+                        <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
+                      </div>                    
+                </article>
+                <article class="dato col-sm-12 col-md-12 col-lg-12">
+                    <div class="boton">
+                        <button class="btn btn-primary" type="submit">Cancelar</button>
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                </article> 
+                               
+            </section>
+        </form>
+    </main>
+
+    <!-- SCRIPT -->
+    <%- include('partials/scripts')  %> 
+    <!-- /SCRIPTS -->
+
+</body>
+
+</html>

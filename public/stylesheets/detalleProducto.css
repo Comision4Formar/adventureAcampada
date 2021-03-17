@@ -1,0 +1,207 @@
+
+/* Cuerpo */
+.cuerpo{
+    background-color: rgba(220, 220, 220, 0.7);
+    border-radius: 5px;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+    margin-top: 150px;
+}
+body{
+    background-image: url('../img/backgroundfinal.jpg');
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Vista desktop */
+div.vista-desktop{
+    display: none;
+}
+div.vista-desktop{
+    margin: 15px 0 15px 0;
+}
+
+/* Configuracion de carrusel */
+.w-100{
+    object-fit: contain;
+    width: 100%;
+    height: 300px;
+} 
+.img-product{
+    margin-top: 13.5px;
+    height: 200px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color: #659999;
+}
+
+/* Configuracion de los botones */
+.btn-success{
+    width: 100%;
+    margin: 15px 0 15px 0;
+    background-color: #f4791f;
+    border-color: #f4791f;
+}
+.btn-success:hover{
+    background-color: #659999;
+    border-color: #659999;
+    box-shadow: 0 0 0 0.25rem #659999;
+}
+
+.btn-check:focus+.btn-success, .btn-success:focus {
+    color: #fff;
+    background-color: #659999;
+    border-color: #659999;
+    box-shadow: 0 0 0 0.25rem #659999;
+}
+/* boton con opciones desplegables */
+ul.dropdown-menu{
+    background-color: #f9efda;
+    border-radius: 5px;
+}
+ul.dropdown-menu:hover{
+    border-color: #ff5715;
+}
+
+/* Descripcion del producto */
+.descripcion div p{
+    padding:7%;
+    background-color:#3d3d3d9a;
+    margin-bottom: 25px;
+    border-radius: 5px;
+   text-align: center;
+}
+.descripcion{
+  padding: 5%;
+}
+/* Comentarios */
+.comentarios{
+  padding: 5%;
+}
+.comentarios div h4{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.comentarios div textarea{
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+}
+.comentarios div button{
+    margin-bottom: 50px;
+}
+
+/* imagen-logo */
+.img-logo{
+    object-fit: contain;
+    height: 150px;
+}
+
+a{
+    color: black;
+}
+header{
+    margin-bottom: 25px;
+}
+/* Barra sobre nav */
+.barra-oferta{
+    background-color: rgb(100, 132, 101);
+}
+/* intento de carrusel de ofertas/publicidad */
+/* section.banner{
+    background: #659999;  
+    background: -webkit-linear-gradient(to right, #f4791f, #659999); 
+    background: linear-gradient(to right, #f4791f, #659999); 
+} */
+
+img.logo{
+    width: 25%;
+    padding-left: 10px;
+    padding-top: 15px;
+    border-radius: 80%;
+
+}
+.navbar-brand{
+    color: black;
+}
+a.nav-link.carrito{
+    display: none;
+}
+section.detalle.row{
+    padding: 15px;
+    background-color:white;
+    align-items: center;
+    border-radius: 10px;
+}
+main .cuerpo.container{
+  background-color: var(--colorAzul);
+}/*Se modifico nombre de convocacion de clase en CCS pero no en ejs*/
+/* Cuerpo qery */
+@media(min-width: 769px){
+  .menuCarrito{    
+      display: none;
+   }
+  a.nav-link.carrito{
+      display: block;
+      padding-left: 10px;
+  }  
+
+}
+
+/* configuracion responsive */
+@media(min-width:1024px){
+  div.vista-desktop{
+      display:block;
+      margin-right: 20px;
+  }
+  .img-product{
+      margin-top: 90px;
+  }
+  .title, .price, .shipping, .shopping, .pay, .shopping-cart{
+      display: none;
+  }
+  button.comentario{
+      width: 35%;
+  }
+  .img-product{
+    margin-top: 13.5px;
+    height: 365px;
+}
+}
+
+/* Elimino baner */
+.headerFondo{
+    display: none;
+}
+
+
+
+/* Footer */
+footer .container-fluid div ul li a{
+    color: white;
+}
+footer .container-fluid div ul li p{
+    color: white;
+}
+
+
+/* Descripcion de detalle del producto */
+.nombre-del-producto{
+   
+    padding: 15px;
+    font-size: 35px;
+    text-align: center;
+}
+.descuento-precio{
+    text-align: right;
+    color: #659999;
+    font-size: 25px;
+    padding-left: 150px;
+    margin-bottom: -4px;
+}
+.precio-final{
+background-color: transparent;
+text-shadow: 8px 7px 6px rgba(0, 0, 0, 0.30);
+font-size: 50px;
+color: #659999;
+}

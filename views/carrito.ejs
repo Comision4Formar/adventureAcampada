@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+     <!-- HEAD -->
+     <%- include('partials/head')  %> 
+     <!-- /HEAD -->
+   
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/carrito.css">
+    <!-- /CSS -->
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header') %> 
+    <!-- /HEADER -->
+    
+    <!-- Cuerpo -->
+    <main class="container cuerpo">
+        <div class="col-sm-12 col-mg-12 col-lg-12">
+             <h1>
+                 Mi Carrito
+            </h1>
+        </div>
+        <section class="row">       
+
+            <div class="producto-carrito col-sm-12 col-md-12 col-lg-3">
+              <div class="card">
+                
+                <img src="/img/products/<%- product.image%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%- product.name %></h5>
+                  <p class="card-text"><%- product.description %></p>
+                </div>
+        
+              </div>
+            </div>
+            <div class="precio col-sm-12 col-md-6 col-lg-3"><p class="price">$150 precio unitario</p> </div>
+            <div class="cantidad col-sm-12 col-md-6 col-lg-3">
+                <div class="dropdown form-floating d-flex flex-column">
+                    <button type="button" class="cantidad btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Seleccione cantidad
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                      <li><a class="dropdown-item" href="#">3</a></li>
+                      <li><a class="dropdown-item" href="#">4</a></li>
+                      <li><a class="dropdown-item" href="#">5</a></li>
+                      <li><a class="dropdown-item" href="#">6</a></li>
+                      <li><a class="dropdown-item" href="#">7</a></li>
+                      <li><a class="dropdown-item" href="#">8</a></li>
+                      <li><a class="dropdown-item" href="#">9</a></li>
+                      <li><a class="dropdown-item" href="#">10</a></li>
+                      <li><a class="dropdown-item" href="#">11</a></li>
+                      <li><a class="dropdown-item" href="#">12</a></li>
+                      
+                    </ul>
+                  </div>
+            </div>
+            <div class="total col-sm-6 col-md-3 col-lg-3"><p class="price">precio total del producto</p>
+            </div>
+    </section>
+    
+    <section class="row">
+            <div class="producto-carrito col-sm-12 col-md-12 col-lg-3"><div class="card">
+                <img src="/img/productos/51O0KTuvjpL._AC_SY355_.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">titulo del producto</h5>
+                  <p class="card-text">Descripcion del producto</p>
+                </div>
+              </div></div>
+            <div class="precio col-sm-12 col-md-6 col-lg-3"><p class="price">$150 precio unitario</p></div>
+            <div class="cantidad col-sm-12 col-md-6 col-lg-3">
+                <div class="dropdown form-floating d-flex flex-column">
+                    <button type="button" class="cantidad btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Seleccione cantidad
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                      <li><a class="dropdown-item" href="#">3</a></li>
+                      <li><a class="dropdown-item" href="#">4</a></li>
+                      <li><a class="dropdown-item" href="#">5</a></li>
+                      <li><a class="dropdown-item" href="#">6</a></li>
+                      <li><a class="dropdown-item" href="#">7</a></li>
+                      <li><a class="dropdown-item" href="#">8</a></li>
+                      <li><a class="dropdown-item" href="#">9</a></li>
+                      <li><a class="dropdown-item" href="#">10</a></li>
+                      <li><a class="dropdown-item" href="#">11</a></li>
+                      <li><a class="dropdown-item" href="#">12</a></li>
+                      
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        <div class="total col-sm-6 col-md-3 col-lg-3"><p class="price">precio total del producto</p>
+        </div>
+    </section>
+        <section class="row">
+          <div class="total col-sm-6 col-md-6 col-lg-6"><p class="total-price-title">Precio Final</p>
+          </div>
+        <div class="total col-sm-6 col-md-6 col-lg-6"><p class="total-price-number">$15.820</p>
+        </div>
+        
+    </section>
+    <!-- Botones -->
+    <section class="row">
+
+      <!-- Medios de envios -->
+        <article class="medios-de-pago col-sm-12 col-md-4 col-lg-4">
+            <div class="dropdown form-floating d-flex flex-column">
+                <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Metodos de envios <i class="fas fa-truck"></i>
+                </button>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                   <li><a class="dropdown-item" href="#">Retiro en sucursal</a></li>
+                   <li><a class="dropdown-item" href="#">Envio a domicilio</a></li>
+                   <li><a class="dropdown-item" href="#">Retirar en sucursal de correo</a></li>
+               </ul>
+            </div>
+        </article>
+
+        <!-- medios de pagos -->
+        <article class="medios-de-envio col-sm-12 col-md-4 col-lg-4">
+            <div class="dropdown ">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Medios de pago <i class="far fa-credit-card"></i> <i class="fas fa-credit-card"></i> 
+                </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Efectivo, pagando en pagofacil o rapipago</a></li>
+                        <li><a class="dropdown-item" href="#">Debito automatico</a></li>
+                        <li><a class="dropdown-item" href="#">targeta de credito</a></li>
+                    </ul>
+             </div>
+        </article>  
+        
+      <!-- Comprar -->
+        <article class="button-comprar col-sm-12 col-md-4 col-lg-4">
+          
+            <div class="form-floating d-flex flex-column">
+                <button type="button" class="btn btn-success ">Comprar ahora <i class="fas fa-hand-holding-usd"></i></button>
+            </div>
+
+        </article>
+        
+    </section>
+
+    </main>
+<!-- SCRIPTS -->
+<%- include('partials/scripts')  %> 
+<!-- /SCRIPTS -->
+</body>
+<!-- FOOTER -->
+<%-include('partials/footer') %> 
+<!-- /FOOTER -->
+</html>

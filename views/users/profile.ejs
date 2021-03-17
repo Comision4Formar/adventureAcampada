@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head')  %>   
+
+<link rel="stylesheet" href="../../stylesheets/profile.css">
+
+
+<body>
+<!-- HEADER -->
+<%- include('../partials/header')  %> 
+<!-- /HEADER -->
+
+<!--Inicio Home-->
+
+<h1> Bienvenido <%= user.firstName%></h1>
+  <main class="container">
+    <section class="row">
+      <h1>Profile</h1>      
+      <article class="dato col-sm-12 col-md-12 col-lg-12">
+          <div role="tabpanel">
+            <!-- List group -->
+            <div class="list-group" id="myList" role="tablist">
+              <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Mi cuenta</a>
+              <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Mi carrito</a> 
+            </div>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="home" role="tabpanel">
+                <h3>Datos Personales</h3>
+                <article class="dato">
+                    <div class="col-sm-12 col-md-5 col-lg-5 img-profile">
+                      <img src="/img/avatar/<%= user.image %> " alt="" class="selfie">
+                    </div>                   
+                    <div class="col-sm-12 col-md-5 col-lg-5 datos">
+                      <ul>
+                        <h1>Mis Datos</h1>
+                        <li>Nombre: <%= user.firstName%></li>
+                        <li>Apellido: <%= user.lastName%></li>
+                        <li>Direccion:</li>
+                        <li>Email: <%= user.email %> </li>
+                        <li>Tel:</li>
+                      </ul>
+                    </div>
+                    
+              </article> 
+            </div>
+            <form action="/users/profile/edit/<%=user.id %>">
+            <button type="submit" class="btn btn-warning editar">Editar</button>
+              </form>
+            <div class="tab-pane" id="profile" role="tabpanel">
+              <h4>Mi carrito</h4>
+            </div>   
+         </div>
+         
+      </article>
+      <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-danger me-md-2" type="submit">Eliminar cuenta</button>
+        </div>
+      </form>
+    </section>
+  
+
+
+   </main> 
+  
+
+<!--Fin Home-->
+ <!-- SCRIPTS -->
+ <%- include('./partials/scripts')  %> 
+ <!-- /SCRIPTS -->
+</body>
+
+</html>
